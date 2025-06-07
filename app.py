@@ -4,7 +4,7 @@ from docx import Document
 import openai
 
 # Set your OpenAI API key
-openai.api_key = "YOUR_OPENAI_KEY"
+openai.api_key = st.secrets["openai"]["ai_key"]
 
 def extract_text_from_pdf(uploaded_file):
     reader = PdfReader(uploaded_file)
