@@ -16,7 +16,7 @@ def extract_text_from_docx(uploaded_file):
 
 def summarize_text(text, prompt="Summarize this:"):
     response = openai.ChatCompletion.create(
-        model="gpt-4",
+        model="gpt-3.5-turbo",
         messages=[
             {"role": "system", "content": "You are a helpful assistant."},
             {"role": "user", "content": f"{prompt} {text}"}
